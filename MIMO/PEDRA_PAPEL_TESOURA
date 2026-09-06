@@ -1,0 +1,19 @@
+import random 
+print("Vamos jogar pedra, papel ou tesoura")
+player_choice = input("escolha pedra papel ou tesoura? ")
+player_choice = input("Choose rock, paper, or scissors: ").lower()
+choices = ["rock","paper","scissors"]
+computer_choice = random.choice(choices)
+print(f"computer chose{computer_choice}")
+if (player_choice == "rock" and computer_choice == "scissors") or (player_choice == "scissors" and computer_choice == "paper") or (player_choice == "paper" and computer_choice == "rock"):
+  winner = "Player"
+elif computer_choice == player_choice:
+  winner = "Tie"
+else:
+  winner = "Computer"
+if winner == "Player":
+   print("You won")
+elif winner == "Computer":
+   print("Computer won")
+else:
+   print("it's a tie")
